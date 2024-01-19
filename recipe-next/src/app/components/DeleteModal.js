@@ -1,9 +1,9 @@
- 
+
 import axios from "axios";
 
 
 
-const DeleteModal = ({ isOpenDelete, setOpenDelete, children, setStatus }) => { 
+const DeleteModal = ({ isOpenDelete, setOpenDelete, children, setStatus }) => {
 
     // Handle the Delete operation
     const handleOnDelete = async (e) => {
@@ -11,7 +11,6 @@ const DeleteModal = ({ isOpenDelete, setOpenDelete, children, setStatus }) => {
 
         try {
             const response = await axios.delete(`http://localhost:6060/api/v1/recipe/delete/${children._id}`);
-
             if (response.status === 200) {
                 alert("Successfully Delete Recipe!");
                 // Close the Delete modal and reset file state
@@ -26,7 +25,7 @@ const DeleteModal = ({ isOpenDelete, setOpenDelete, children, setStatus }) => {
         }
     };
 
-    // Render the Delete modal
+    // Render and close the Delete modal
     if (!isOpenDelete) return null;
 
     const handleOnClose = (e) => {
@@ -36,17 +35,17 @@ const DeleteModal = ({ isOpenDelete, setOpenDelete, children, setStatus }) => {
 
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
+        <div className="fixed inset-0 modal-opacity backdrop-blur-sm flex justify-center items-center"
             id="delete"
             onClick={handleOnClose}
         >
-            <div className="w-[600px] flex flex-col">
+            <div className="w-[600px] flex flex-col ">
 
                 <button className="text-white text-xl place-self-end"
                     onClick={e => setOpenDelete(false)}
                 >X</button>
 
-                <div className="bg-white p-5 rounded">
+                <div className="bg-white p-5 rounded ">
 
                     <h5 className="mb-2 font-bold  text-gray-900">Are you sure you want to delete the recipe?</h5>
 

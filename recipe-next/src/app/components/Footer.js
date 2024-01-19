@@ -1,4 +1,8 @@
 
+import { BsFacebook, BsInstagram, BsLinkedin, BsTwitterX } from "react-icons/bs";
+
+
+
 
 function Footer() {
   return (
@@ -34,22 +38,25 @@ function Footer() {
                 class="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
               >
-                <i class="flex fab fa-twitter"></i></button>
+                 <BsFacebook/>
+                </button>
               <button
                 class="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
               >
-                <i class="flex fab fa-facebook-square"></i></button>
+                <BsTwitterX/>
+                </button>
               <button
                 class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
               >
-                <i class="flex fab fa-dribbble"></i></button >
+               <BsInstagram/>
+               </button >
               <button
                 class="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
                 type="button"
               >
-                <i class="flex fab fa-github"></i>
+                <BsLinkedin/> 
               </button>
             </div>
           </div>
@@ -126,7 +133,7 @@ function Footer() {
         >
           <div class="w-full md:w-4/12 px-4 mx-auto text-center">
             <div class="text-sm text-gray-600 font-semibold py-1">
-              Developed © 2024 Tayebur Rahman
+            2024 © Tayebur Rahman
               <a
                 href="https://www.creative-tim.com"
                 class="text-gray-600 hover:text-gray-900"

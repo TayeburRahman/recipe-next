@@ -17,15 +17,13 @@ export default function NewRecipe() {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
       } = useForm() 
 
  
-    const onSubmit = async (data) => {
+    const onSubmit = async (data) => { 
 
-        const ddd =''
-        if(ddd) throw new FetchingApiError()
-        
         if(!image){
             setErrorImg({message: "Image is required"})
             return;
@@ -52,11 +50,13 @@ export default function NewRecipe() {
 
             if (response.status === 200) {
                 alert("Successfully create new Recipe!");
+                reset()
                 // Handle successful response data if needed
                 console.log(response.data); 
                 setFile(null)
             } else {
                 if(response.statusText !=="OK") throw new FetchingApiError()
+                console.log(response.data); 
             }
 
         } catch (error) {
@@ -69,7 +69,7 @@ export default function NewRecipe() {
     return (
         <div id="main" className="main-content flex-1 mt-12 mt-5 bg-gray-100">
             <div className=" rounded-tl-3xl mt-5 ">
-                <div className=" bg-gradient-to-r to-gray-800 p-4 shadow text-2xl text-white">
+                <div className=" bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white">
                     <h1 className="font-bold pl-2">Add New</h1>
                 </div>
             </div>

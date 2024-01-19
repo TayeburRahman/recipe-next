@@ -64,7 +64,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section>
+            <section className="custom_class_se">
                 <SearchFiltering recipes={recipes} setFilter={setFilter} setSearch={setSearch} search={search} filter={filter} />
                 <Recipes recipes={recipes} loading={loading} error={error}/>
             </section>

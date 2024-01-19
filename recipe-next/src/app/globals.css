@@ -25,3 +25,21 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.custom_class_se {
+  position: relative;
+}
+
+.custom_class_rec {
+  position: absolute;
+  top: 130px;
+  width: auto;
+  background: white;
+  width: 68%;
+  right: -9%;
+}
+
+.modal-opacity {
+  background: #00000003;
+  opacity: 5;
+}

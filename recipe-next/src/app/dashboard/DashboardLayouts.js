@@ -5,7 +5,7 @@ function DashboardLayout({ children }) {
     return (
         <div>
             <header>
-                <nav aria-label="menu nav" className="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+                <nav aria-label="menu nav" className=" bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
 
                     <div className="flex flex-wrap items-center">
                         <div className="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
@@ -37,23 +37,23 @@ function DashboardLayout({ children }) {
             </header>
             <main>
                 <div className="flex flex-col md:flex-row">
-                    <nav aria-label="alternative nav">
+                    <nav aria-label="alternative nav " className='bg-gray-800'>
                         <div className="bg-gray-800 shadow-xl h-20 fixed bottom-0 mt-12 md:relative md:h-screen z-10 w-full md:w-48 content-center">
 
                             <div className="md:mt-12 md:w-48 md:fixed md:left-0 md:top-0 content-center md:content-start text-left justify-between">
                                 <ul className="list-reset flex flex-row md:flex-col pt-3 md:py-3 px-1 md:px-2 text-center md:text-left">
                                     <li className="mr-3 flex-1">
-                                        <Link href="/dashboard/home" className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-pink-500">
+                                        <Link href="/dashboard/home" className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-blue-500">
                                             <i className="fas fa-tasks pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Dashboard</span>
                                         </Link>
                                     </li> 
                                     <li className="mr-3 flex-1">
-                                        <Link href="/dashboard/managerecipe" className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-blue-600">
+                                        <Link href="/dashboard/managerecipe" className="block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-blue-500">
                                             <i className="fas fa-chart-area pr-0 md:pr-3 text-blue-600"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Manage Recipe</span>
                                         </Link>
                                     </li>
                                     <li className="mr-3 flex-1">
-                                        <Link href="/dashboard/newrecipe" className="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-red-500">
+                                        <Link href="/dashboard/newrecipe" className="block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-blue-500">
                                             <i className="fa fa-wallet pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Add Recipe</span>
                                         </Link>
                                     </li>

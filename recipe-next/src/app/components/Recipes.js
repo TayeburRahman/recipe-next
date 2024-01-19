@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FetchingApiError } from "../utility/exceptions";
 
 function Recipes({recipes, loading, error}) {
 
@@ -14,14 +15,14 @@ function Recipes({recipes, loading, error}) {
                         recipes && recipes?.map((recipe, idx) => (
                             <div key={idx} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow  ">
                                 <Link href={`/recipe/${recipe._id}`}>
-                                    <img className="rounded-t-lg" src={`http://localhost:6060/${recipe.image}`} alt="" />
+                                    <img className="rounded-t-lg h-52 w-full"  src={`http://localhost:6060/${recipe.image}`} alt="" />
                                 </Link>
                                 <div className="p-5">
                                     <p className="text-sm font-bold  text-gray-700"> {recipe?.label}</p>
                                     <Link href={`/recipe/${recipe._id}`}>
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{recipe?.name}</h5>
                                     </Link>
-                                    <p className="mb-3 font-normal text-gray-700 ">{recipe?.description}</p>
+                                    <p className="mb-3 font-normal text-gray-700 ">{recipe?.description.slice(0, 200)}..</p>
                                     <Link href={`/recipe/${recipe._id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 ">
                                         Read more
                                         <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

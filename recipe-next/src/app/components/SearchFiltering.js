@@ -1,15 +1,13 @@
 "use client"
- 
+
 import labelsData from '/ingredients.json';
 
 
- 
- 
-function SearchFiltering({ recipes, setSearch, setFilter, search}) {
-    // const [recipes, setRecipes] = useState([]);
-    // const [filteredRecipes, setFilteredRecipes] = useState([]);
- 
- 
+
+
+function SearchFiltering({ recipes, setSearch, setFilter, search }) {
+
+    //    This Filtering is workable
 
     // useEffect(() => {
     //   const fetchData = async () => {
@@ -27,8 +25,6 @@ function SearchFiltering({ recipes, setSearch, setFilter, search}) {
     //   fetchData();
     // }, []);
 
-
-    // console.log('filteredRecipes', filteredRecipes, filterLabel)
 
     // useEffect(() => {
     //   // Filter recipes by label
@@ -57,12 +53,12 @@ function SearchFiltering({ recipes, setSearch, setFilter, search}) {
     //   searchByName();
     // }, [filterLabel, searchTerm, recipes]);
 
- 
+
 
 
 
     return (
-        <div className="mx-auto mt-5 w-screen max-w-screen-md py-20 leading-6">
+        <div className="mx-auto mt-5 w-screen max-w-screen-md py-20 leading-6 custom_class_se">
             <form>
                 <div className="flex">
                     <label className="flex-shrink-0 z-10 inline-flex items-center text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 " for="category">
@@ -95,18 +91,18 @@ function SearchFiltering({ recipes, setSearch, setFilter, search}) {
             </form>
 
             {
-                recipes.length > 0 && search  && (
-                    <div className="mt-2 divide-y rounded-b-xl border px-4 shadow-lg sm:mr-32 sm:ml-28" >
-                    {
-                         recipes.map((recipe, idx) => (
-                            <div className="cursor-pointer px-4 py-2 text-gray-600 hover:bg-gray-600 hover:text-white" onClick={e => setSearch(recipe?.name)}><span className="m-0 font-medium"> {recipe?.name}</span></div>
-                        ))
-                    }
-                </div>
+                recipes.length > 0 && search && (
+                    <div className="mt-2 rounded-b-xl border px-4 shadow-lg sm:mr-32 sm:ml-28 custom_class_rec" >
+                        {
+                            recipes.map((recipe, idx) => (
+                                <div className="cursor-pointer px-4 py-2 text-gray-600 hover:bg-gray-600 hover:text-white" onClick={e => setSearch(recipe?.name)}><span className="m-0 font-medium"> {recipe?.name}</span></div>
+                            ))
+                        }
+                    </div>
                 )
             }
 
-            
+
         </div>
     )
 }

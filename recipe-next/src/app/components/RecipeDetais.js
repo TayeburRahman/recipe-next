@@ -2,7 +2,7 @@ import axios from "axios";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
-import { FetchingApiError } from "../utility/exceptions";
+import { FetchingApiError } from "../utils/exceptions";
 
 function RecipeDetails({ }) {
     const [loading, setLoading] = useState(true);

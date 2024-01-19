@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FetchingApiError } from "../utility/exceptions";
+import { FetchingApiError } from "../utils/exceptions";
 
 function Recipes({recipes, loading, error}) {
 

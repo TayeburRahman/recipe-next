@@ -1,7 +1,7 @@
 "use client"
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { FetchingApiError } from "../utility/exceptions";
+import { FetchingApiError } from "../utils/exceptions";
 import labelsData from '/ingredients.json';
 
 
